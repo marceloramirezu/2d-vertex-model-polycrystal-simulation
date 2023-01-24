@@ -6,7 +6,7 @@ Anaconda3
 
 ## Create and activate environment
 conda create --name python310-env python=3.10\
-conda activate python-env
+conda activate python310-env
 
 ## Install required libraries
 pip install -r requirements.txt\
