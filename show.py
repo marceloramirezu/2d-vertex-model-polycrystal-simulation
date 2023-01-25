@@ -192,7 +192,8 @@ def events_pygame(list_states, ticks_wait_input):
         list_states["moves"]["down"] = True  
         list_states["changes"] = True        
         
-    if keys[pygame.K_F1]:
+    #if keys[pygame.K_F1]:
+    if keys[pygame.K_z]:
         list_states["moves"]["zoom_0"] = True  
         list_states["changes"] = True              
     else:

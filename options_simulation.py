@@ -12,7 +12,7 @@ DIST_VORONOI = -1
 
 # 2.- SIMULATION OPTIONS ----------------------------------------------------------------------
 TEST = False                    # test structure 
-ITERS_BETWEEN_PRINTS =  2       # timesteps between saves
+ITERS_BETWEEN_PRINTS =  1       # timesteps between saves
 MAX_TIMESTEP = 2000             # max timesteps
 INITIAL_N_GRAINS = 300          # number of grains
 MIN_GRAINS = 10                 # min number of grains
