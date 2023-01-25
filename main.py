@@ -45,7 +45,7 @@ def main():
         while ((vxm.ACTUAL_TIMESTEP < MAX_TIMESTEP) and ((vxm.N_GRAINS > MIN_GRAINS))):
     
             
-            if( (vxm.ACTUAL_TIMESTEP % OPTIONS["OPTIONS_VERTEX_MODEL"]["ITERS_BETWEEN_PRINTS"] == 0) ):           
+            if( (vxm.ACTUAL_TIMESTEP % OPTIONS["OPTIONS_VERTEX_MODEL"]["TIMESTEP_BETWEEN_SAVES"] == 0) ):           
                 vxm.save_actual_state()
 
             if(vxm.ACTUAL_TIMESTEP % (MAX_TIMESTEP/100) ==0): # imprime porcentaje de simulacion
@@ -79,7 +79,7 @@ def main():
             
             vxm.next_iteration()    
             
-        if( (vxm.ACTUAL_TIMESTEP % OPTIONS["OPTIONS_VERTEX_MODEL"]["ITERS_BETWEEN_PRINTS"] == 0) ):      
+        if( (vxm.ACTUAL_TIMESTEP % OPTIONS["OPTIONS_VERTEX_MODEL"]["TIMESTEP_BETWEEN_SAVES"] == 0) ):      
                 print(f"Max timestep Progress: {actual_per}%\tactual timestep: {vxm.ACTUAL_TIMESTEP}\tN° Grains:{vxm.N_GRAINS}")
                 vxm.save_actual_state()
         # END WHILE

@@ -12,7 +12,7 @@ DIST_VORONOI = -1
 
 # 2.- SIMULATION OPTIONS ----------------------------------------------------------------------
 TEST = False                    # test structure 
-ITERS_BETWEEN_PRINTS =  1       # timesteps between saves
+TIMESTEP_BETWEEN_SAVES =  1       # timesteps between saves
 MAX_TIMESTEP = 2000             # max timesteps
 INITIAL_N_GRAINS = 300          # number of grains
 MIN_GRAINS = 10                 # min number of grains
@@ -32,7 +32,7 @@ OPTIONS_VORONOI = { # options for generation of initial state of structure with 
 # MOV_VERTEX = 1 # vertex movility # not used 
 OPTIONS_VERTEX_MODEL = { # options used in vertex model simulation
     "TEST": TEST,
-    "ITERS_BETWEEN_PRINTS": ITERS_BETWEEN_PRINTS,
+    "TIMESTEP_BETWEEN_SAVES": TIMESTEP_BETWEEN_SAVES,
     "MAX_TIMESTEP": MAX_TIMESTEP,
     "MIN_GRAINS": MIN_GRAINS,
     "GAMMA_0": GAMMA_0,

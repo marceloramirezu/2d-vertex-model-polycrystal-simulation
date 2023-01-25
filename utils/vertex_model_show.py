@@ -241,13 +241,13 @@ class vertex_model_show:
             for i in range(0, plus_iters):
                 #if((self.ACTUAL_TIMESTEP) < self.options_vertex_model["MAX_TIMESTEP"]):
                 if((self.ACTUAL_TIMESTEP) < self.FINAL_TIMESTEP):
-                    self.ACTUAL_TIMESTEP = self.ACTUAL_TIMESTEP+1*self.options_vertex_model["ITERS_BETWEEN_PRINTS"]
+                    self.ACTUAL_TIMESTEP = self.ACTUAL_TIMESTEP+1*self.options_vertex_model["TIMESTEP_BETWEEN_SAVES"]
                 else:
                     self.ACTUAL_TIMESTEP = 0
         if(plus_iters < 0):
             for i in range(0, (plus_iters*-1)):
                 if(self.ACTUAL_TIMESTEP > 0):
-                    self.ACTUAL_TIMESTEP = self.ACTUAL_TIMESTEP-1*self.options_vertex_model["ITERS_BETWEEN_PRINTS"]
+                    self.ACTUAL_TIMESTEP = self.ACTUAL_TIMESTEP-1*self.options_vertex_model["TIMESTEP_BETWEEN_SAVES"]
                 else:
                     #self.ACTUAL_TIMESTEP = self.options_vertex_model["MAX_TIMESTEP"]
                     self.ACTUAL_TIMESTEP = self.FINAL_TIMESTEP
@@ -290,7 +290,7 @@ class vertex_model_show:
                 f"[DOWN]: Prev {self.options_show['FPS']} timestep",           
                 f"[SPACE]: PLAY/PAUSE",      
                 f"[0]: Go to t=0",              
-                f"[F1]: (Zoom:x1) + (pos:(0,0))",              
+                f"[Z]: (Zoom:x1) & (pos:(0,0))",              
         ]
         if (not self.show_options):
             textos_opciones = [
